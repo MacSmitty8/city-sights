@@ -1,11 +1,16 @@
 import React from 'react';
 import './App.scss';
 import Navbar from './components/Navbar/Navbar';
+import SightTourList from './components/SightTourList';
 
 
 function App() {
   return (
-    <Navbar />
+    <main>
+      <Navbar />
+      <SightTourList />
+    </main>
+  
   );
 }
 
