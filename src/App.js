@@ -1,8 +1,11 @@
-import './App.css';
+import React from 'react';
+import './App.scss';
+import Navbar from './components/Navbar/Navbar';
+
 
 function App() {
   return (
-    <h1>City Sights App</h1>
+    <Navbar />
   );
 }
 
