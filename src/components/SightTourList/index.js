@@ -5,7 +5,7 @@ import SightTour from '../SightTour/SightTour'
 export default class SightTourList extends Component {
   render() {
     return (
-   <section>
+   <section className='tourList'>
     <SightTour />
    </section>
     )
