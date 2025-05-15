@@ -1,11 +1,12 @@
 import React from 'react'
+import "./SightTour.scss"
 
 const SightTour = () => {
   return (
     <article className='tour'>
       <div className='image-container'>
-        <img width="300"
-          src='https://images.pexels.com/photos/1239162/pexels-photo-1239162.jpeg?auto=compress&cs=tinysrgb&w=600'
+        <img 
+          src='https://suburbantours.com/wp-content/uploads/nyc-featured.jpg'
           alt='New York' />
 
         <span className="close-btn">
