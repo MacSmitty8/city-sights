@@ -17,7 +17,7 @@ const SightTour = () => {
         <h3>city</h3>
         <h4>name</h4>
         <h5>
-        info 
+        info{" "} 
         <span>
          <i className="fas fa-caret-square-down"></i>
         </span>
