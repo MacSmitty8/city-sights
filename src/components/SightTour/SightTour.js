@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
 import "./SightTour.scss";
 
-const SightTour = ({ tour }) => {
+const SightTour = ({ tour, removeTour }) => {
   const [showInfo, setShowInfo] = useState(false);
 
   const handleInfo = () => {
     setShowInfo(!showInfo);
   };
 
-  const { city, img, name, info } = tour;
-
+  const { id, city, img, name, info } = tour;
   return (
     <article className='tour'>
       <div className='image-container'>
@@ -17,7 +16,7 @@ const SightTour = ({ tour }) => {
           src={img}
           alt={name} 
         />
-        <span className="close-btn">
+        <span className="close-btn" onClick={() => removeTour(id)}>
           <i className="fas fa-window-close" />
         </span>
       </div>
