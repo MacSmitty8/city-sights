@@ -9,6 +9,8 @@ export default class SightTourList extends Component {
   };
   render() {
     const {tours} = this.state;
+    console.log(this.state.tours);
+
     return (
    <section className='tourList'>
     {tours.map(tour => {
