@@ -1,16 +1,22 @@
-import React from 'react'
-import "./SightTour.scss"
+import React, { useState } from 'react';
+import "./SightTour.scss";
 
-const SightTour = ({tour}) => {
+const SightTour = ({ tour }) => {
+  const [showInfo, setShowInfo] = useState(false);
+
+  const handleInfo = () => {
+    setShowInfo(!showInfo);
+  };
+
   const { city, img, name, info } = tour;
+
   return (
-    
     <article className='tour'>
       <div className='image-container'>
         <img 
           src={img}
-          alt='' />
-
+          alt={name} 
+        />
         <span className="close-btn">
           <i className="fas fa-window-close" />
         </span>
@@ -19,15 +25,15 @@ const SightTour = ({tour}) => {
         <h3>{city}</h3>
         <h4>{name}</h4>
         <h5>
-        info{" "} 
-        <span>
-         <i className="fas fa-caret-square-down"></i>
-        </span>
+          info{" "} 
+          <span onClick={handleInfo}>
+            <i className="fas fa-caret-square-down"></i>
+          </span>
         </h5>
-        <p>{info}</p>
+        {showInfo && <p>{info}</p>}
       </div>
     </article>
-  )
-}
+  );
+};
 
-export default SightTour
+export default SightTour;
