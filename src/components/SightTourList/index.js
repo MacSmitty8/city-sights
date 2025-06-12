@@ -6,12 +6,17 @@ import { SightTourData } from '../SightTourData'
 export default class SightTourList extends Component {
   state ={
     tours: SightTourData
-  }
+  };
   render() {
-    console.log(this.state.tours)
+    const {tours} = this.state;
     return (
    <section className='tourList'>
-    <SightTour />
+    {tours.map(tour => {
+      return(
+        <SightTour key={tour.id} 
+        tour={tour}/>
+      )
+    })}
    </section>
     )
   }
